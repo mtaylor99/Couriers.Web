@@ -32,7 +32,7 @@ import {
   iterateErrors,
 } from "../../common/types/TransactionError";
 import { useAppDispatch } from "../../state";
-import { getJob, putJob } from "../../api/thunks/jobs";
+import { getJob, saveJob } from "../../api/thunks/jobs";
 import {
   selectIsJobSaving,
   selectJobDto,
@@ -66,8 +66,7 @@ const JobForm = () => {
 
   const submit = (data: IJob) => {
     clearErrors();
-    dispatch(putJob(data))
-      // dispatch(postJob(data))
+    dispatch(saveJob(data))
       .then((result) => unwrapResult(result))
       .then(() => {
         createSuccessToast("Job details saved");

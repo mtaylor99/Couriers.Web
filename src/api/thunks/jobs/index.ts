@@ -63,6 +63,36 @@ export const getJob = createAsyncThunk(
   }
 );
 
+export const saveJob = createAsyncThunk(
+  "job/saveJob",
+  async (dto: IJob, { signal, rejectWithValue }) => {
+    // getState
+
+    let result;
+    if (dto.jobId > 0) {
+      result = await genericPut(
+        `${process.env.REACT_APP_API_URL}/job/${dto.jobId}`,
+        dto,
+        signal
+        // selectAuthToken(getState() as AppState)
+      );
+    } else {
+      result = await genericPost(
+        `${process.env.REACT_APP_API_URL}/job`,
+        dto,
+        signal
+        // selectAuthToken(getState() as AppState)
+      );
+    }
+
+    if (isTransactionError(result)) {
+      return rejectWithValue(result);
+    }
+
+    return result;
+  }
+);
+
 export const postJob = createAsyncThunk(
   "job/postJob",
   async (dto: IJob, { signal, rejectWithValue }) => {
