@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Drawer } from "@material-ui/core";
+import { Drawer, Fab } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { ComponentType, PropsWithChildren } from "react";
 
@@ -18,7 +18,9 @@ const WithDrawer = <P extends object>(Component: ComponentType<P>) => {
       <Drawer anchor="right" open={open}>
         <div>
           <div>
-            <CloseIcon onClick={onClose} />
+            <Fab onClick={onClose}>
+              <CloseIcon />
+            </Fab>
           </div>
           <div>
             <Component {...(rest as P)} />
