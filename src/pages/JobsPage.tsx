@@ -16,7 +16,7 @@ const JobsPage = () => {
   const jobsGridFilters = useSelector(selectJobsGridFilters);
 
   useEffect(() => {
-    dispatch(getJobsGrid(jobsGridFilters)).then((result) =>
+    dispatch(getJobsGrid(jobsGridFilters) as any).then((result: any) =>
       unwrapResult(result)
     );
     // .then(() => {

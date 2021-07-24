@@ -88,8 +88,8 @@ const JobsGrid = () => {
               count={jobs.count}
               rowsPerPage={rowsPerPage}
               page={currentPage}
-              onChangePage={(event, page) => handleChangePage(event, page)}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
+              onPageChange={(event, page) => handleChangePage(event, page)}
+              onRowsPerPageChange={handleChangeRowsPerPage}
             />
           </GridRow>
         </GridBody>

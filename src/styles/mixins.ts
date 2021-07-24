@@ -12,7 +12,7 @@ declare module "@material-ui/core/styles/createMixins" {
     exampleMixin: CSSProperties;
     pagePadding: CSSProperties;
   }
-  // allow configuration using `createMuiTheme`
+  // allow configuration using `createTheme`
   interface MixinsOptions {
     exampleMixin: CSSProperties;
     pagePadding: CSSProperties;

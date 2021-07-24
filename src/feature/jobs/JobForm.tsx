@@ -56,7 +56,7 @@ const JobForm = () => {
 
   useEffect(() => {
     if (id > 0) {
-      dispatch(getJob(id)).then((result) => unwrapResult(result));
+      dispatch(getJob(id) as any).then((result: any) => unwrapResult(result));
     }
   }, [dispatch, id]);
 
@@ -66,13 +66,13 @@ const JobForm = () => {
 
   const submit = (data: IJob) => {
     clearErrors();
-    dispatch(saveJob(data))
-      .then((result) => unwrapResult(result))
+    dispatch(saveJob(data) as any)
+      .then((result: any) => unwrapResult(result))
       .then(() => {
         createSuccessToast("Job details saved");
         push("/");
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         if (isTransactionError(error) && !error.generalError) {
           createValidationWarningToast();
           iterateErrors(error, (propName, propError) =>
@@ -165,7 +165,7 @@ const JobForm = () => {
           <Controller
             control={control}
             name="createdDate"
-            defaultValue={dto?.createdDate || null}
+            defaultValue={dto?.createdDate || undefined}
             render={({ field: { onChange, value, name } }) => (
               <DateInput
                 disableFuture
@@ -191,7 +191,7 @@ const JobForm = () => {
           <Controller
             control={control}
             name="jobStatus"
-            defaultValue={dto?.jobStatus || null}
+            defaultValue={dto?.jobStatus || undefined}
             render={({ field: { onChange, value, name } }) => (
               <SelectInput
                 displayEmpty
@@ -224,7 +224,7 @@ const JobForm = () => {
           <Controller
             control={control}
             name="active"
-            defaultValue={dto?.active || null}
+            defaultValue={dto?.active || undefined}
             render={({ field: { onChange, value, name } }) => (
               <YesNoInput
                 id={name}

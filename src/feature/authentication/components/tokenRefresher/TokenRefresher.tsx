@@ -27,9 +27,9 @@ const TokenRefresher = () => {
 
     const doRefresh = () => {
       if (mounted) {
-        dispatch(postAuthorizeRefresh())
-          .then((result) => unwrapResult(result))
-          .then((newToken) => {
+        dispatch(postAuthorizeRefresh() as any)
+          .then((result: any) => unwrapResult(result))
+          .then((newToken: string) => {
             if (!mounted) return;
             const decoded = jwtDecode<JwtPayload>(newToken);
             if (decoded && decoded.exp != null) {
@@ -41,7 +41,7 @@ const TokenRefresher = () => {
               setAuthorised(false);
             }
           })
-          .catch((result) => {
+          .catch((result: boolean) => {
             if (!mounted) return;
             if (result === false) {
               setError(true);

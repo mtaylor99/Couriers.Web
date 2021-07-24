@@ -1,4 +1,4 @@
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { createTheme } from "@material-ui/core/styles";
 import DropdownIcon from "../common/components/DropdownIcon";
 import {
   workSansBold,
@@ -10,7 +10,7 @@ import {
 } from "../common/fonts";
 import mixins from "./mixinValues";
 
-const defaultTheme = createMuiTheme({
+const defaultTheme = createTheme({
   overrides: {
     MuiCssBaseline: {
       "@global": {

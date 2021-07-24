@@ -23,9 +23,9 @@ const App = () => {
 
   useEffect(() => {
     Promise.all([
-      dispatch(getJobStatuses()),
-      dispatch(getScheduleStatuses()),
-      dispatch(getDrivers()),
+      dispatch(getJobStatuses() as any),
+      dispatch(getScheduleStatuses() as any),
+      dispatch(getDrivers() as any),
     ])
       .catch(() => {
         setError(true);
