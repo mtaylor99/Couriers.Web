@@ -171,7 +171,7 @@ const JobForm = () => {
                 disableFuture
                 id={name}
                 name={name}
-                value={value?.toString()}
+                value={value}
                 onChange={onChange}
               />
             )}

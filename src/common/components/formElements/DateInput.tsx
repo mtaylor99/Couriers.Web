@@ -3,7 +3,7 @@ import { formatISO } from "date-fns";
 import { StyledDatePicker } from "./styles";
 
 interface IDateInputProps {
-  value: string | null;
+  value: Date | null;
   onChange: (newValue: string | null) => void;
   format?: string;
   id?: string;
