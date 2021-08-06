@@ -8,7 +8,7 @@ export const reducers = {
   auth: authReducer,
   globalData: globalDataReducer,
   jobs: jobsReducer,
-}
+};
 
 export const store = configureStore({
   reducer: reducers,
