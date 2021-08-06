@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With React Testing Library Snapshot for App component 1`] = `
+<div>
+  <div
+    class="Toastify"
+  />
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary WithStyles(ForwardRef(AppBar))-root-3 WithStyles(ForwardRef(AppBar))-root-4 MuiPaper-elevation0"
+      >
+        <div
+          class="div-root-5 div-root-6"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="TNHG logo"
+              src="logo.svg"
+            />
+          </a>
+        </div>
+        <div
+          class="div-root-7 div-root-8"
+        >
+          <a
+            href="/"
+          >
+            Dashboard
+          </a>
+        </div>
+        <div
+          class="div-root-7 div-root-9"
+        >
+          <a
+            href="/jobs"
+          >
+            Jobs
+          </a>
+        </div>
+        <div
+          class="div-root-7 div-root-10"
+        >
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover WithStyles(ForwardRef(Link))-root-11 WithStyles(ForwardRef(Link))-root-12 MuiTypography-colorPrimary"
+            href="need-help"
+            target="_blank"
+          >
+            Need Help?
+          </a>
+        </div>
+      </header>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-item"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div>
+          Dashboard Page
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <div
+        class="MuiContainer-root WithStyles(ForwardRef(Container))-root-13 WithStyles(ForwardRef(Container))-root-14 MuiContainer-maxWidthLg"
+      >
+        <div
+          class="div-root-15 div-root-16"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained WithStyles(ForwardRef(Button))-root-17 WithStyles(ForwardRef(Button))-root-18 MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Terms and Conditions
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <span
+            class="span-root-19 span-root-20"
+          >
+            |
+          </span>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained WithStyles(ForwardRef(Button))-root-17 WithStyles(ForwardRef(Button))-root-21 MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Privacy
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <span
+            class="span-root-19 span-root-22"
+          >
+            |
+          </span>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained WithStyles(ForwardRef(Button))-root-17 WithStyles(ForwardRef(Button))-root-23 MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Cookies
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="div-root-24 div-root-25"
+        >
+          © Copyright 2021 | The New Home Group
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
