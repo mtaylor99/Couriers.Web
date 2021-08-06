@@ -46,6 +46,33 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
+  "jest": {
+    "coverageReporters": ["text"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/api/",
+      "<rootDir>/src/common/",
+      "<rootDir>/src/feature/",
+      "<rootDir>/src/pages/",
+      "<rootDir>/src/styles/",
+      "<rootDir>/src/tests/",
+      "<rootDir>/src/App.tsx",
+      "<rootDir>/src/index.tsx",
+      "<rootDir>/src/react-app-env.d.ts",
+      "<rootDir>/src/reportWebVitals.ts"
+    ], 
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 25,
+        "lines": 65,
+        "statements": 55
+      }
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -97,6 +124,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "redux-mock-store": "^1.5.4"
   }
 }
