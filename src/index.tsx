@@ -8,6 +8,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./state";
 import defaultTheme from "./styles/defaultTheme";
+import worker from "./mocks/browser";
+
+if (process.env.NODE_ENV === "development") {
+  worker.start();
+}
 
 ReactDOM.render(
   <Provider store={store}>
