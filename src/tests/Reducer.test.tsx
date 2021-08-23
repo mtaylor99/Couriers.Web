@@ -3,7 +3,6 @@ import {
   IPaginationRequest,
   setJobsGridPagination,
 } from "../state/slices/jobsReducer";
-import mockFetch from "./mockFetch";
 import { testStore, testStoreWithPreloadedDrivers } from "./state";
 
 describe("With React Testing Library", () => {
@@ -41,6 +40,3 @@ describe("With React Testing Library", () => {
     expect(state.filters.take).toEqual(paginationRequest.take);
   });
 });
-
-beforeAll(() => jest.spyOn(window, "fetch"));
-beforeEach(() => (window.fetch as jest.Mock).mockImplementation(mockFetch));
