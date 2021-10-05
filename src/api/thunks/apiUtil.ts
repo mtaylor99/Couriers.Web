@@ -40,7 +40,7 @@ export const genericGet = async <R>(
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
 
   switch (response.status) {
@@ -70,7 +70,7 @@ export const genericPost = async <R, B>(
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
 
   switch (response.status) {
@@ -98,7 +98,7 @@ export const genericPostNoContent = async <B>(
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
 
   switch (response.status) {
@@ -126,7 +126,7 @@ export const genericPut = async <B>(
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
 
   switch (response.status) {
@@ -152,7 +152,7 @@ export const genericPutNoBody = async (
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
 
   switch (response.status) {
@@ -180,7 +180,7 @@ export const genericDelete = async <B>(
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
   switch (response.status) {
     case 204:
@@ -205,7 +205,7 @@ export const genericDeleteNoBody = async (
       signal,
     });
   } catch (reason) {
-    throw new HttpException(-1, reason);
+    throw new HttpException(-1, reason as string);
   }
   switch (response.status) {
     case 204:

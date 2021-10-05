@@ -48,11 +48,11 @@ const jobSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getJobsGrid.fulfilled, (state, action) => {
-      state.data = action.payload;
+      state.data = action.payload as IGridResponse<IJobsGridItem>;
       state.loading = false;
     });
     builder.addCase(getJob.fulfilled, (state, action) => {
-      state.dto = action.payload;
+      state.dto = action.payload as IJob;
       state.loading = false;
     });
     builder.addCase(postJob.pending, (state) => {

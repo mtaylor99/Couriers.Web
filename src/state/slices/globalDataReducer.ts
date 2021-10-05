@@ -24,13 +24,13 @@ const globalDataSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getJobStatuses.fulfilled, (state, action) => {
-      state.jobStatuses = action.payload;
+      state.jobStatuses = action.payload as Array<IJobStatus>;
     });
     builder.addCase(getScheduleStatuses.fulfilled, (state, action) => {
-      state.scheduleStatuses = action.payload;
+      state.scheduleStatuses = action.payload as Array<IScheduleStatus>;
     });
     builder.addCase(getDrivers.fulfilled, (state, action) => {
-      state.drivers = action.payload;
+      state.drivers = action.payload as Array<IDriver>;
     });
   },
 });
